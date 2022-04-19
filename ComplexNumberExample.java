@@ -17,9 +17,9 @@ class Complex{
         image = i;
     }
 
-    public void Add(double r, double i){
-        real += r;
-        image += i;
+    public void Add(Complex c){
+        real += c.real;
+        image += c.image;
 
         System.out.println(real+" + i * "+image );
     }
@@ -39,6 +39,6 @@ public class ComplexNumberExample {
         Complex obj1 = new Complex(r1,i1);
         Complex obj2 = new Complex(r2,i2);
 
-        obj1.Add(obj2.real,obj2.image);
+        obj1.Add(obj2);
     }
 }
