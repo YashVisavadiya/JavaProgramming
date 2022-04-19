@@ -10,9 +10,9 @@ class Time{
         minute = min;
     }
 
-    public void AddTime(int h,int min){
-        hour += h;
-        minute += min;
+    public void AddTime(Time t){
+        hour += t.hour;
+        minute += t.minute;
         if(hour>=24){
             hour = hour % 24;
         }
@@ -37,6 +37,6 @@ public class TimeExample {
 
         Time obj1 = new Time(h1,m1);
         Time obj2 = new Time(h2,m2);
-        obj1.AddTime(obj2.hour,obj2.minute);
+        obj1.AddTime(obj2);
     }
 }
